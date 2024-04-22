@@ -40,4 +40,4 @@ const Layout = () => {
 
 export default Layout;
 
-const styles = StyleSheet.create({});
+
