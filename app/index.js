@@ -1,8 +1,10 @@
-import { Link } from "expo-router";
+import { Link, Redirect, router } from "expo-router";
 import { StatusBar } from "expo-status-bar";
-import { Image, SafeAreaView, ScrollView, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
+
 import { images } from "../constants";
 import CustomButton from "../components/CustomButton";
+import { SafeAreaView } from "react-native-safe-area-context";
 export default function App() {
   return (
     <SafeAreaView className="bg-primary h-full">
@@ -36,7 +38,9 @@ export default function App() {
           </Text>
           <CustomButton
             title={"continue with Email"}
-            handlePress={() => {}}
+            handlePress={() => {
+              router.push("Sign-in");
+            }}
             containerStyles={`w-full mt-7`}
           />
         </View>
